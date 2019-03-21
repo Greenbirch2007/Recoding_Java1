@@ -1,0 +1,13 @@
+# /etc/profile: system-wide .profile file for the Bourne shell (sh(1))
+
+
+# 环境变量设置
+export PATH="$PATH:/home/lk/eclipse"
+
+
+
+
+alias cec="cd /home/lk/eclipse"
+
+alias ec="./eclipse"
+
