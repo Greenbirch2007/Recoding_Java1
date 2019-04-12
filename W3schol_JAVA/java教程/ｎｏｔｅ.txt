@@ -507,3 +507,27 @@ public class MyRunnable implements Runnable
 
 
 Java 运算符
+
+java循环结构　-for,while,do...while
+
+Java 分支结构 - if…else/switch
+
+switch语句判断一个变量与一系列值中某个值是否相等，每个值称为一个分支
+
+Java Number类
+Java Character类
+
+字符串的长度
+length
+
+连接字符串  .concat()
+
+创建格式化字符串
+
+printf(),format()
+
+Java StringBuffer和StringBuilder类
+
+java数组
+
+
