@@ -530,4 +530,79 @@ Java StringBuffer和StringBuilder类
 
 java数组
 
+声明数组变量
+
+首先必须声明数组变量，才能在程序中使用数组。
+
+dataType[] arrarRefVar
+
+double[] myList;
+
+
+创建数组
+
+Java语言使用new操作符号来创建数组
+
+arrayRefVar = new dataType[arraySize]
+
+数组变量的声明，和创建数组可以用一条语句，
+
+dataType[] arrayRefVar = new dataType[arraySize];
+
+数组的元素是通过索引访问的。
+
+double[] myList = new double[10];
+
+处理数组
+
+数组的元素类型和数组的大小都是确定的，所以当处理数组元素时候，我们通常使用基本循环或foreach徐那话
+
+下面展示如何创建，初始化和操作数组
+
+foreach循环
+
+可以在不使用下标的情况下遍历数组
+
+
+
+数组作为函数的参数
+
+
+数组可以作为参数传递给方法。
+
+数组作为函数额返回值
+
+
+Array类
+
+java.util,Array类能方便地操作数组，它提供的所有方法都是静态的
+
+１．给数组赋值：fill方法
+２．对数组排序：sort方法，按升序
+３．比较数组：equals方法比较数组中元素值是否相等
+４．　查找数组元素：binarySearch方法能对排序好的数组进行二分查找法操作
+
+java日期时间
+
+java.util包提供了Date类来封装当前的日期和时间。Date类提供两个函数来实例化Date对象
+
+获取当前日期时间
+
+java中获取当前日期和时间很简单，使用Date对象的toString()方法来打印当前日期和时间
+
+日期的比较
+
+有３个方法
+
+１．getTime()获取两个日期，然后比较
+２．使用before(),after().,equals().返回布尔值
+３．使用compareTo()方法，它是由Comparable接口定义的，Date类实现了这个接口
+
+
+
+使用SimpleDateFormat格式化日期
+
+
+
+
 
