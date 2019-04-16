@@ -603,6 +603,131 @@ java中获取当前日期和时间很简单，使用Date对象的toString()方�
 使用SimpleDateFormat格式化日期
 
 
+SimpleDateFormat是一个一语言环境敏感
+的方式来格式化和分析日期的类。
+SimpleDateFormat允许你选择任何用户自定义日期
+时间格式来运行
+
+简单的DateFormat格式化编码
+
+时间模式字符串用来指定时间格式。
+在此模式中，所有的ASCII字母被保留为模式字母
+
+使用printf格式化日期
+
+
+printf方法可以轻松地格式化时间和日期。
+使用两个字母格式，它以t开头以下面表格中的一个字母结尾
+
+可以利用一个格式化字符串指出要被格式化的参数的索引
+
+索引必须紧跟在%后面，而且必须以$结束
+
+可以使用<标志。它表明先前被格式化的参数要被再次使用
+
+解析字符串为时间
+
+SimpleDateFormat类有一些附加的方法，特别是parse(),
+它试图按照给定的SimpleDateFormat对象的格式化存储来解析字符串
+
+Java休眠（sleep）
+你可以让程序休眠一毫秒的时间
+
+测量时间
+
+
+Calendar类
+
+Calendar累是一个抽象累，在实际使用时实现特定的子类的对象，
+创建对象的过程对程序员来说时透明的，
+只需要使用getInstance方法创建即可
+
+
+创建一个代表系统当前日期的Calendar对象
+
+Calendar c = Calendar.getInstance();
+
+创建一个指定日期的Calendar对象
+
+使用Calendar类代表特定的时间，需要首先创建一个Calendar的对象
+，然后再设定该对象中的年月日参数来完成
+
+
+Calendar c1 = Calendar.getInstance();
+c1.set(2009,6-1,12)
+
+Calendar类对象信息的设置
+
+Set设置
+
+
+调用
+
+public final void set(int year,int month,int date)
+
+利用字段类型设置
+
+如果只设置某个字段，例如日期的值，则可以使用如下set方法
+
+puclic void set(int field,int value)
+
+
+把c1对象代表的日期设置为10号，其它所有的数值会被重新计算
+
+c1.set(Calendar.DATE,10);
+
+
+把c1对象代表的年份设置为2008年，其他的所有数值会被重新计算
+
+
+c1.set(Calendar.YEAR,2008);
+
+其他字段属性set的意义以此类推
+
+
+Add设置
+
+
+Calendar c1 = Calendar.getInstance();
+
+把c1对象的日期加上10，也就是c1所表的日期的10天后的日期，其它所有的数值会被重新计算
+
+c1.add(Calendar.DATE,10);
+
+Calendar类对象信息的获得
+
+Calendar c1= Calendar.getInstance();
+
+int year = c1.get(Calendar.YEAR);
+int month = c1.get(Calendar.MONTH) +1;
+int date = c1.get(Calendar.DATE);
+int hour = c1.get(Calendar.HOUR_OF_DAY);
+int minute = c1.get(Calendar.MINUTE);
+int second = c1.get(Calendar.SECOND);
+int day = c1.get(Calendar.DAY_OF_WEEK);
+
+
+GregorianCalendar类
+
+
+JAVA正则表达式
+
+正则表达式定义字符串的模式。正则表达式可以用来搜索，编辑或处理文本
+正则表达式并不仅限于某一种语言。
+java正则表达式和perl最为类似
+
+java.util.regex包 主要包括以下三个类：
+
+
+1.Pattern类
+2.Matcher类
+3.PatternSyntaxException
+
+捕获组
+
+
+
+
 
 
 
