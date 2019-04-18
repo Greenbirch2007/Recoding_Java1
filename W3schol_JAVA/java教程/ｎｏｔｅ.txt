@@ -725,9 +725,220 @@ java.util.regex包 主要包括以下三个类：
 
 捕获组
 
+捕获组是把多个字符当一个端度单元进行处理的方法，它通过对括号内的
+字符分组来创建。
+
+捕获组是通过从左至右计算其开括号来编号。
+((A)(B(C)))
+共有四个组
+
+可以通过调用matcher对象的groupCount方法来查看表达式
+有多少个分组。groupCount方法返回一个int值，
+表示matcher对象当前有多个捕获组
+
+还有一个特殊的组(组0)，它总是代表整个表达式。
+该组不包括在groupCount的返回值中。
+
+
+Matcher类的方法
+
+索引方法
+
+索引方法提供了有用的索引值，精确表明输入字符串在哪能找到匹配
+
+public int start()
+public int start(int group)
+public int end()
+public int end(int group)
+
+
+研究方法
+研究方法用来检查输入字符串病返回一个布尔值，表示是否找到该模式
+
+public boolean lookingAt()
+public boolean find()
+public boolean find(int start)
+public boolean matches()
+
+替换方法
+
+替换方法是替换输入字符穿里文本的方法
+
+public Matcher appendReplacement()
+public StringBuffer appendTail()
+public String replaceAll()
+public String replaceFirst()
+public static String quoteReplacement()
 
 
 
+matches和lookingAt方法
+
+matches和lookingAt方法都用来尝试匹配一个输入序列模式，
+它们的不同是matcher要求整个序列都匹配，
+而lookingAt不要求
+
+这两个方法经常输入字符串的使用、、
+
+
+replaceFirst和replaceAll方法
+
+都是用来替换匹配正则表达式的文本。不同的是，
+replaceFirst替换首次匹配，replaceAll替换所有匹配
+
+appendReplacement和appendTail方法
+用于文本替换
+
+PatternSyntaxException类的方法
+PatternSyntaxException是一个非强制异常类，
+它指示一个正则表达式模式中额语法错误。
+
+
+
+java方法
+
+println()是一个方法（Method），而System是系统类(Class),
+out是标准输出对象(Object).这句话的用法是调用
+系统累System中的标准输出对象out中的方法println()
+
+
+java方法是语句的集合，它们在一起执行一个功能
+
+方法是解决一类问题的步骤的有序组合
+方法包含于类或对象中
+方法在程序中被创建，在其他地方被引用
+
+方法的定义
+
+一般情况下，定义一个方法包含以下语法：
+
+修饰符  返回值类型 方法名 (参数类型 参数名){
+  ...
+  方法体
+return 返回值；
+ }
+
+方法包含一个方法头和一个方法体
+
+public static int age(int birthday){...}
+
+static float interest(float principal,int year){...}
+
+
+在一些其他语言中只过程或函数。一个返回非void类型返回值的方法称为函数；
+一个返回void类型返回值的方法叫做过程。
+
+public static int max(int num1,int num2){
+    int result;
+    if (num1 > num2)
+        result = num1;
+    else
+        result = num2;
+
+return result;
+
+}
+
+
+方法调用
+
+java支持两个调用方法的方式，根据方法是否返回来选择
+
+当程序调用一个方法时，程序的控制权交给了被调用的方法。
+当被调用方法的返回语句执行或到达方法体闭括号时候
+交还控制权给程序
+
+当方法返回一个值的时候，方法调用通常被当做一个值
+
+
+int larger = max(30,40);
+
+如果方法返回值是void，方法调用一定是一条语句。
+System.out.println("E");
+
+Main方法是被JVM调用的
+
+void关键字
+
+通过值传递参数
+
+调用一个方法时候需要提供参数，你必须按照参数列表指定的顺序提供
+public static void nPrintln(String message,int n){
+ for (int i=0;i<n;i++) System.out.println(message);
+}
+
+一个方法，用于交换两个变量
+
+方法的重载
+
+变量作用域
+
+变量的范围是程序中该变量可以被引用的部分
+方法内定义的变量被称为局部变量
+局部变量的作用范围从声明开始，直到包含它的块结束
+
+局部变量必须声明才可以使用
+方法的参数范围涵盖整个方法。参数实际上是一个局部变量
+for循环的初始化部分声明的变量，其作用范围在整个循环
+但循环体内声明的变量其适用范围是从它声明到循环体结束。
+
+命令行参数的使用
+
+命令行参数是在执行程序时候紧跟在程序名字后面的消息
+
+
+构造方法
+
+当一个对象被创建时候，构造方法用来初始化该对象。构造方法和它所在类的名字相同，
+但构造方法没有返回值
+
+通常会使用构造方法给一个类的实例变量赋值，或执行其他必要的步骤
+来创建一个完整的对象
+
+所有的类都有构造方法，因为java自动提供了一个默认构造方法，
+它把所有成员初始化为0
+一旦定义了自己的构造方法，默认构造方法就会失效
+
+
+class MyClass{
+    int x;
+    
+    MyClass(){
+    x= 10;
+}
+
+大多数时候需要一个有参数的构造方法
+
+
+可变参数
+
+在方法声明中，在指定参数类型后加一个省略号(...)
+一个方法中只能指定一个可变参数，它必须是方法的最后一个参数。
+任何普通的参数必须在它之前声明
+
+finalize()方法
+
+
+java允许定义这样的方法，它在对象被垃圾收集器析构（回收）之前
+调用，这个方法叫做finalize(),它用来清楚回收对象
+
+例如，可以使用finalize()来确保一个对象打开的文件被关闭了
+
+在finalize()方法里，你必须指定在对象销毁时候要执行的操作
+
+protected void finalize()
+{}
+
+关键字protected是一个限定符，它确保finalize()方法不会被
+该类以外的代码调用。
+
+java的内存回收可以由JVM来自动完成
+
+
+Java 流(Stream)、文件(File)和IO
+
+
+}
 
 
 
