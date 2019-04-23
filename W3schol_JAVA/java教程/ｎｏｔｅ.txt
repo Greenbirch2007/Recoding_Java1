@@ -937,8 +937,142 @@ java的内存回收可以由JVM来自动完成
 
 Java 流(Stream)、文件(File)和IO
 
+java.io包几乎包含了所有操作输入，输出需要的类。所有这些流类
+代表了输入源和输出目标
 
-}
+java.io包中的流支持很多格式，比如：基本类型，对象，本地化字符集等
+
+一个流可以理解为一个数据的序列。输入流表示从一个源读取数据，输出
+流表示向一个目标写数据
+
+java为I/O提供了强大而灵活的支持，使其更广泛地应用到文件传输和
+网络变成中。
+
+读取控制台输入
+
+java的控制台输入由System.in完成
+
+
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in))
+
+
+从控制台读取多字符输入
+int read() throws IOException
+
+从控制台读取字符串
+
+从标准输入读取一个字符串需要使用BufferedReader的readLine()方法
+
+控制台输出
+
+读写文件
+
+一个流被定义为一个数据序列。输入流用于源读取数据，
+输出流用于向目标写数据
+
+FileInputStream ，该流用于从文件读取数据，它的对象可以ongoi
+用关键字new来创建
+
+FileOutputStream，该累用来创建一个文件并向文件中写数据
+
+文件和I/O
+
+File Class（类）
+FileReader Class（类）
+FileWriter Class（类）
+
+java中的目录
+
+创建目录：
+
+File类中有两个方法用来创建文件夹：
+
+1.mkdir()方法创建一个文件夹
+2.mkdirs()方法用来创建一个文件夹和它的所有父文件夹
+
+读取目录
+
+一个目录其实就是一个File对象，它包含其他文件和文件夹
+
+java Scanner类
+
+
+可以通过Scanner类来获取用户的输入
+
+
+Scanner s = new Scanner(System.in);
+
+
+使用next 方法
+
+next()和nextLine()的区别
+
+java异常处理
+
+异常的种类：
+1.用户输入了非法数据
+2.要打开的文件不存在
+3.网络通信时连接中断，或JVM内存溢出
+
+
+1.检查行异常
+2.运行时异常
+3.错误
+
+
+Exception类的层次
+
+
+所有异常类是从java.lang.Exception类集成的子类
+
+
+java内置异常类
+
+
+java语言定义了一些异常类在java.lang标准包中
+
+异常方法
+捕捉异常
+
+使用try和catch关键字可以捕获异常。try/catch代码
+放在可能出现异常的地方
+
+
+try{
+
+} catch(ExceptionName e1){}
+
+
+多重捕获快
+
+
+try {} catch(){}catch(){}catch(){}
+
+
+throws/throw关键字
+
+
+finanlly关键字
+
+注意：
+
+1.所有异常都必须是Throwable的子类
+2.如果希望写一个检查行异常类，则需要继承Exception类
+3.如果想写一个运行时异常类，那么需要继承RuntimeException类
+
+class MyException extends Excepiton{}
+
+只继承Exception类来创建的异常类是检查性异常类
+
+一个异常类和其他任何类一样，包含有变量和方法
+
+通用异常
+
+1.JVM(java虚拟机)异常：由JVM抛出的异常或错误
+2.程序级异常：由程序或API程序抛出的异常
+
+
+
 
 
 
